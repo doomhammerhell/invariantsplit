@@ -11,9 +11,9 @@ permissions:
   pull-requests: write
 
 env:
-  RECIPIENT_A: 0x0000000000000000000000000000000000001001
-  RECIPIENT_B: 0x0000000000000000000000000000000000001002
-  RECIPIENT_C: 0x0000000000000000000000000000000000001003
+  RECIPIENT_A: '0x0000000000000000000000000000000000001001'
+  RECIPIENT_B: '0x0000000000000000000000000000000000001002'
+  RECIPIENT_C: '0x0000000000000000000000000000000000001003'
 
 jobs:
   validate:
@@ -47,9 +47,13 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     needs: validate
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - name: Release Please
         uses: googleapis/release-please-action@v4
         with:
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
+          token: ${{ secrets.GITHUB_TOKEN }}
