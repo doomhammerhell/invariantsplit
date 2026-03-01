@@ -111,7 +111,10 @@ async function main() {
     screenshots: screenshotResults
   };
 
-  await writeFile(resolve('docs', 'assets', 'article-assets.json'), `${JSON.stringify(manifest, null, 2)}\n`);
+  await writeFile(
+    resolve('docs', 'assets', 'article-assets.json'),
+    `${JSON.stringify(manifest, null, 2)}\n`
+  );
   console.log('Exported article diagrams and screenshots.');
 }
 

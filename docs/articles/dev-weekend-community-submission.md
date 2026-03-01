@@ -269,17 +269,17 @@ The benchmark results are intentionally interpreted narrowly.
 
 #### Bytecode footprint
 
-| Artifact | Creation Code | Runtime Code |
-| --- | ---: | ---: |
-| Solidity baseline | 1013 bytes | 695 bytes |
-| Huff implementation | 232 bytes | 223 bytes |
+| Artifact            | Creation Code | Runtime Code |
+| ------------------- | ------------: | -----------: |
+| Solidity baseline   |    1013 bytes |    695 bytes |
+| Huff implementation |     232 bytes |    223 bytes |
 
 #### Selector-path gas
 
-| Function | Gas Used |
-| --- | ---: |
-| `SplitSolidity.distribute()` | 111,998 |
-| `InvariantSplit.distribute()` | 110,430 |
+| Function                      | Gas Used |
+| ----------------------------- | -------: |
+| `SplitSolidity.distribute()`  |  111,998 |
+| `InvariantSplit.distribute()` |  110,430 |
 
 This is the key takeaway:
 
