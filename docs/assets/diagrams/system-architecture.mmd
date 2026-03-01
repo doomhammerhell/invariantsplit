@@ -1,0 +1,25 @@
+flowchart LR
+  subgraph "Execution Plane"
+    Factory["InvariantSplitFactory\n(CREATE2 control point)"]
+    SolCore["SplitSolidity\nbaseline"]
+    HuffCore["InvariantSplit\nminimal Huff"]
+    SolObs["SplitSolidityObserved\nobservable baseline"]
+    HuffObs["InvariantSplitObserved\nobservable Huff"]
+  end
+
+  subgraph "Assurance Plane"
+    Spec["Formal spec\nand ADRs"]
+    Tests["Differential + property tests"]
+    Release["Release bundle\nconfigHash + salts + hashes"]
+    Verify["Explorer verification\nand runtime attestation"]
+    Evidence["Published manifests\nand demo transactions"]
+  end
+
+  Spec --> Tests
+  Factory --> SolCore
+  Factory --> HuffCore
+  Factory --> SolObs
+  Factory --> HuffObs
+  Tests --> Release
+  Release --> Verify
+  Verify --> Evidence

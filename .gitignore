@@ -1,0 +1,15 @@
+.DS_Store
+.env
+.secrets/
+.devcontainer/.cache/
+.idea/
+.husky/_/
+.vscode/
+CHANGELOG.tmp
+coverage/
+broadcast/
+cache/
+node_modules/
+out/
+huff-neo-js-*.tgz
+.tmp_huff_pkg/

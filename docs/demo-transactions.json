@@ -1,0 +1,76 @@
+{
+  "generatedAt": "2026-02-28T22:11:02.644Z",
+  "chain": {
+    "id": "11155111",
+    "name": "sepolia"
+  },
+  "explorerUrl": "https://sepolia.etherscan.io",
+  "deployments": {
+    "SplitSolidity": "0xc5068CA8448E5FAEd512eA4F734eE6f5b1b08f71",
+    "InvariantSplit": "0x43A2F08D802642BD30EbaDa4A509d5bbBCa0d2fC"
+  },
+  "recipients": {
+    "recipientA": "0x98e45be04dedfc4f51515d3c243fd38566a5f1b1",
+    "recipientB": "0x69cfb07ce5f4481ff8ce5a5be8e8be8426b1fb2a",
+    "recipientC": "0x66b23c52b11375d082dc32137dd4ae9d3cf702f4"
+  },
+  "transactions": [
+    {
+      "label": "solidity_receive",
+      "target": "SplitSolidity",
+      "path": "receive",
+      "to": "0xc5068CA8448E5FAEd512eA4F734eE6f5b1b08f71",
+      "addressUrl": "https://sepolia.etherscan.io/address/0xc5068CA8448E5FAEd512eA4F734eE6f5b1b08f71",
+      "hash": "0xb8cc2d7d08e8b61e6002c865f49827afb6367a214610a8b23027f5d5fa669284",
+      "txUrl": "https://sepolia.etherscan.io/tx/0xb8cc2d7d08e8b61e6002c865f49827afb6367a214610a8b23027f5d5fa669284",
+      "valueWei": "123456789012345",
+      "valueEth": "0.000123456789012345",
+      "gasUsed": "0xf576",
+      "blockNumber": "0x9e0a81"
+    },
+    {
+      "label": "huff_receive",
+      "target": "InvariantSplit",
+      "path": "receive",
+      "to": "0x43A2F08D802642BD30EbaDa4A509d5bbBCa0d2fC",
+      "addressUrl": "https://sepolia.etherscan.io/address/0x43A2F08D802642BD30EbaDa4A509d5bbBCa0d2fC",
+      "hash": "0x1b70a39368432788464e1076c32fb0b08f74ae6cb30147aba26407084393d49e",
+      "txUrl": "https://sepolia.etherscan.io/tx/0x1b70a39368432788464e1076c32fb0b08f74ae6cb30147aba26407084393d49e",
+      "valueWei": "234567890123456",
+      "valueEth": "0.000234567890123456",
+      "gasUsed": "0xc887",
+      "blockNumber": "0x9e0a82"
+    },
+    {
+      "label": "solidity_distribute",
+      "target": "SplitSolidity",
+      "path": "selector",
+      "to": "0xc5068CA8448E5FAEd512eA4F734eE6f5b1b08f71",
+      "addressUrl": "https://sepolia.etherscan.io/address/0xc5068CA8448E5FAEd512eA4F734eE6f5b1b08f71",
+      "hash": "0x9e16a013a5b99a9941d9e3688c28bd961a3d80a814dcdeac1fac83c6bb04c6c5",
+      "txUrl": "https://sepolia.etherscan.io/tx/0x9e16a013a5b99a9941d9e3688c28bd961a3d80a814dcdeac1fac83c6bb04c6c5",
+      "valueWei": "345678901234567",
+      "valueEth": "0.000345678901234567",
+      "gasUsed": "0xf5f7",
+      "blockNumber": "0x9e0a83"
+    },
+    {
+      "label": "huff_distribute",
+      "target": "InvariantSplit",
+      "path": "selector",
+      "to": "0x43A2F08D802642BD30EbaDa4A509d5bbBCa0d2fC",
+      "addressUrl": "https://sepolia.etherscan.io/address/0x43A2F08D802642BD30EbaDa4A509d5bbBCa0d2fC",
+      "hash": "0x47be17dfef49b7dffb5695761de9fe90f0174b1fb59fb96ed02c9e700724a09d",
+      "txUrl": "https://sepolia.etherscan.io/tx/0x47be17dfef49b7dffb5695761de9fe90f0174b1fb59fb96ed02c9e700724a09d",
+      "valueWei": "456789012345678",
+      "valueEth": "0.000456789012345678",
+      "gasUsed": "0xc8fc",
+      "blockNumber": "0x9e0a84"
+    }
+  ],
+  "recipientDeltas": {
+    "recipientAWei": "580246296358022",
+    "recipientBWei": "348147777814812",
+    "recipientCWei": "232098518543212"
+  }
+}

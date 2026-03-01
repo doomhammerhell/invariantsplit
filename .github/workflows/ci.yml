@@ -1,0 +1,88 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - 'codex/**'
+      - 'feature/**'
+  pull_request:
+
+env:
+  RECIPIENT_A: 0x0000000000000000000000000000000000001001
+  RECIPIENT_B: 0x0000000000000000000000000000000000001002
+  RECIPIENT_C: 0x0000000000000000000000000000000000001003
+
+jobs:
+  quality:
+    name: Quality (${{ matrix.os }}, Node ${{ matrix.node }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - macos-latest
+        node:
+          - 22
+          - 24
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Setup Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: stable
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build
+        run: npm run build
+
+      - name: Test
+        run: npm test
+
+  benchmark:
+    name: Benchmark and reports
+    runs-on: ubuntu-latest
+    needs: quality
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Setup Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: stable
+
+      - name: Run benchmark
+        run: npm run benchmark
+
+      - name: Generate bytecode report
+        run: npm run bytecode:report
+
+      - name: Upload bytecode report
+        uses: actions/upload-artifact@v4
+        with:
+          name: bytecode-report
+          path: docs/bytecode-report.json

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "project": "InvariantSplit",
+  "deployedAt": "2026-02-28T20:43:35.252Z",
+  "chain": {
+    "id": "31337",
+    "name": "anvil"
+  },
+  "explorerUrl": null,
+  "recipients": {
+    "recipientA": "0x0000000000000000000000000000000000001001",
+    "recipientB": "0x0000000000000000000000000000000000001002",
+    "recipientC": "0x0000000000000000000000000000000000001003"
+  },
+  "verification": {
+    "attempted": false,
+    "status": "skipped",
+    "verifier": "unconfigured",
+    "message": "No verification provider configured"
+  },
+  "contracts": {
+    "SplitSolidity": {
+      "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "source": "src/SplitSolidity.sol:SplitSolidity",
+      "creationCodeSize": 1013,
+      "runtimeCodeSize": 695,
+      "runtimeCodeHash": "0xceb946d0eeef59b2fb1ef84e7e56682c29badadc2e999ed8043881986c7ff016",
+      "verification": {
+        "status": "skipped",
+        "verifier": "unconfigured"
+      }
+    },
+    "InvariantSplit": {
+      "address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "source": "src/InvariantSplit.huff",
+      "creationCodeSize": 178,
+      "runtimeCodeSize": 169,
+      "runtimeCodeHash": "0xe2dee719e4ac5c3d86e0c850040103b28e266f5c81d379188a86a5e5f2507dd6",
+      "compiledRuntimeMatchesChain": true,
+      "verification": {
+        "status": "bytecode-attested"
+      }
+    }
+  }
+}

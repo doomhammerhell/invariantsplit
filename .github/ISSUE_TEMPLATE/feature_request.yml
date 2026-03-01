@@ -1,0 +1,44 @@
+name: Feature request
+description: Propose a change with explicit trade-offs and scope.
+title: '[Feature]: '
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: What problem are you trying to solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Describe the solution at the level of behavior, not implementation guesswork.
+    validations:
+      required: true
+  - type: textarea
+    id: tradeoffs
+    attributes:
+      label: Trade-offs
+      description: What becomes more complex, larger or riskier if we do this?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: How should success be measured?
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Contracts
+        - Assurance / provenance
+        - CI/CD
+        - Documentation
+        - Developer experience
+    validations:
+      required: true

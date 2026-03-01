@@ -1,0 +1,70 @@
+{
+  "generatedAt": "2026-02-28T23:04:53.943Z",
+  "repoRawBase": "https://raw.githubusercontent.com/doomhammerhell/invariantsplit/main",
+  "diagrams": {
+    "system-architecture": {
+      "sourcePath": "docs/assets/diagrams/system-architecture.mmd",
+      "svg": {
+        "path": "docs/assets/diagrams/system-architecture.svg",
+        "rawUrl": "https://raw.githubusercontent.com/doomhammerhell/invariantsplit/main/docs/assets/diagrams/system-architecture.svg"
+      },
+      "png": {
+        "path": "docs/assets/diagrams/system-architecture.png",
+        "rawUrl": "https://raw.githubusercontent.com/doomhammerhell/invariantsplit/main/docs/assets/diagrams/system-architecture.png"
+      }
+    },
+    "delivery-pipeline": {
+      "sourcePath": "docs/assets/diagrams/delivery-pipeline.mmd",
+      "svg": {
+        "path": "docs/assets/diagrams/delivery-pipeline.svg",
+        "rawUrl": "https://raw.githubusercontent.com/doomhammerhell/invariantsplit/main/docs/assets/diagrams/delivery-pipeline.svg"
+      },
+      "png": {
+        "path": "docs/assets/diagrams/delivery-pipeline.png",
+        "rawUrl": "https://raw.githubusercontent.com/doomhammerhell/invariantsplit/main/docs/assets/diagrams/delivery-pipeline.png"
+      }
+    }
+  },
+  "screenshots": {
+    "factory-sepolia.png": {
+      "path": "docs/assets/screenshots/factory-sepolia.png",
+      "rawUrl": "https://raw.githubusercontent.com/doomhammerhell/invariantsplit/main/docs/assets/screenshots/factory-sepolia.png",
+      "sourceUrl": "https://image.thum.io/get/png/width/1600/https://sepolia.etherscan.io/address/0x8f9633c55d6EC8EF0426742460A4B374481D6c0C"
+    },
+    "solidity-observed-sepolia.png": {
+      "path": "docs/assets/screenshots/solidity-observed-sepolia.png",
+      "rawUrl": "https://raw.githubusercontent.com/doomhammerhell/invariantsplit/main/docs/assets/screenshots/solidity-observed-sepolia.png",
+      "sourceUrl": "https://image.thum.io/get/png/width/1600/https://sepolia.etherscan.io/address/0xc5068CA8448E5FAEd512eA4F734eE6f5b1b08f71"
+    },
+    "solidity-observed-sepolia-real.png": {
+      "path": "docs/assets/screenshots/solidity-observed-sepolia-real.png",
+      "rawUrl": "https://raw.githubusercontent.com/doomhammerhell/invariantsplit/main/docs/assets/screenshots/solidity-observed-sepolia-real.png",
+      "sourceUrl": "https://sepolia.etherscan.io/address/0xc5068CA8448E5FAEd512eA4F734eE6f5b1b08f71"
+    },
+    "huff-observed-sepolia.png": {
+      "path": "docs/assets/screenshots/huff-observed-sepolia.png",
+      "rawUrl": "https://raw.githubusercontent.com/doomhammerhell/invariantsplit/main/docs/assets/screenshots/huff-observed-sepolia.png",
+      "sourceUrl": "https://image.thum.io/get/png/width/1600/https://sepolia.etherscan.io/address/0x43A2F08D802642BD30EbaDa4A509d5bbBCa0d2fC"
+    },
+    "huff-observed-sepolia-real.png": {
+      "path": "docs/assets/screenshots/huff-observed-sepolia-real.png",
+      "rawUrl": "https://raw.githubusercontent.com/doomhammerhell/invariantsplit/main/docs/assets/screenshots/huff-observed-sepolia-real.png",
+      "sourceUrl": "https://sepolia.etherscan.io/address/0x43A2F08D802642BD30EbaDa4A509d5bbBCa0d2fC"
+    },
+    "huff-distribute-tx-sepolia.png": {
+      "path": "docs/assets/screenshots/huff-distribute-tx-sepolia.png",
+      "rawUrl": "https://raw.githubusercontent.com/doomhammerhell/invariantsplit/main/docs/assets/screenshots/huff-distribute-tx-sepolia.png",
+      "sourceUrl": "https://image.thum.io/get/png/width/1600/https://sepolia.etherscan.io/tx/0x47be17dfef49b7dffb5695761de9fe90f0174b1fb59fb96ed02c9e700724a09d"
+    },
+    "factory-sepolia-real.png": {
+      "path": "docs/assets/screenshots/factory-sepolia-real.png",
+      "rawUrl": "https://raw.githubusercontent.com/doomhammerhell/invariantsplit/main/docs/assets/screenshots/factory-sepolia-real.png",
+      "sourceUrl": "https://sepolia.etherscan.io/address/0x8f9633c55d6EC8EF0426742460A4B374481D6c0C"
+    },
+    "huff-distribute-tx-sepolia-real.png": {
+      "path": "docs/assets/screenshots/huff-distribute-tx-sepolia-real.png",
+      "rawUrl": "https://raw.githubusercontent.com/doomhammerhell/invariantsplit/main/docs/assets/screenshots/huff-distribute-tx-sepolia-real.png",
+      "sourceUrl": "https://sepolia.etherscan.io/tx/0x47be17dfef49b7dffb5695761de9fe90f0174b1fb59fb96ed02c9e700724a09d"
+    }
+  }
+}

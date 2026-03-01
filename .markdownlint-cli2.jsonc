@@ -1,0 +1,22 @@
+{
+  "config": {
+    "default": true,
+    "first-line-heading": false,
+    "line-length": false,
+    "no-bare-urls": false,
+    "ol-prefix": {
+      "style": "one_or_ordered"
+    },
+    "ul-style": {
+      "style": "dash"
+    }
+  },
+  "globs": [
+    "**/*.md",
+    "!attestations/**",
+    "!broadcast/**",
+    "!cache/**",
+    "!node_modules/**",
+    "!out/**"
+  ]
+}

@@ -1,0 +1,40 @@
+name: Security concern
+description: Public template for non-sensitive security hardening discussions only.
+title: '[Security]: '
+labels:
+  - security
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not use this template for undisclosed vulnerabilities. Follow [SECURITY.md](../../SECURITY.md) for private reporting.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Security concern
+      description: Describe the class of risk or hardening gap.
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Risk rationale
+      description: Why does this matter for the project?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Suggested mitigation
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Surface
+      options:
+        - Supply chain
+        - Smart contract behavior
+        - Release provenance
+        - CI/CD
+        - Documentation / process
+    validations:
+      required: true

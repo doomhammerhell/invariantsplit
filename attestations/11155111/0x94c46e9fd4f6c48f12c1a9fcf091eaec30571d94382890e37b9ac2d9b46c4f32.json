@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-02-28T22:09:11.740Z",
+  "digest": "0xa03df6c5544fbbc83a10aef77a049184356e90784d71472f0f55fa5263e70fb1",
+  "payload": {
+    "schemaVersion": 1,
+    "project": "InvariantSplit",
+    "deployedAt": "2026-02-28T22:08:41.864Z",
+    "chain": {
+      "id": "11155111",
+      "name": "sepolia"
+    },
+    "config": {
+      "version": 1,
+      "systemId": "0xbcfc7e5c945d530190614504913bfb2f6ef5b8cff3e78ebfdc0cab897d7a4760",
+      "profile": "observed",
+      "profileHash": "0x2d48fad9034a47f293988d5e85fce1510a920127b7d5b0869a13619156a149b1",
+      "configHash": "0x94c46e9fd4f6c48f12c1a9fcf091eaec30571d94382890e37b9ac2d9b46c4f32",
+      "weights": {
+        "recipientA": 5000,
+        "recipientB": 3000,
+        "recipientC": 2000
+      }
+    },
+    "factory": {
+      "address": "0x8f9633c55d6EC8EF0426742460A4B374481D6c0C"
+    },
+    "recipients": {
+      "recipientA": "0x98e45be04dedfc4f51515d3c243fd38566a5f1b1",
+      "recipientB": "0x69cfb07ce5f4481ff8ce5a5be8e8be8426b1fb2a",
+      "recipientC": "0x66b23c52b11375d082dc32137dd4ae9d3cf702f4"
+    },
+    "contracts": {
+      "SplitSolidity": {
+        "artifact": "SplitSolidityObserved",
+        "artifactId": "0x2f418dd059e9acb64f1a9c9e350b3b2bad7793531f886bc5a717bfdf46b062e1",
+        "address": "0xc5068CA8448E5FAEd512eA4F734eE6f5b1b08f71",
+        "predictedAddress": "0xc5068CA8448E5FAEd512eA4F734eE6f5b1b08f71",
+        "salt": "0x9268aebf5aa3fc40ad40818d69aaa4db18b828b218060e0287b8eb26a5811e62",
+        "creationCodeSize": 1258,
+        "runtimeCodeSize": 904,
+        "runtimeCodeHash": "0x3d635d268dbaab2539454c7a5a9e2daadb7fe3c667b822541b981af012145375",
+        "compiledRuntimeMatchesChain": null,
+        "verification": {
+          "status": "failed",
+          "verifier": "etherscan"
+        }
+      },
+      "InvariantSplit": {
+        "artifact": "InvariantSplitObserved",
+        "artifactId": "0x49d036c608efc24cccc584b906eb38fcc09c00d31cd3fbd6d432d0c8ff3a872b",
+        "address": "0x43A2F08D802642BD30EbaDa4A509d5bbBCa0d2fC",
+        "predictedAddress": "0x43A2F08D802642BD30EbaDa4A509d5bbBCa0d2fC",
+        "salt": "0xe583b98a29438f9a20e69e03d5464382cd837c0236b688c19a03cb366f9da753",
+        "creationCodeSize": 304,
+        "runtimeCodeSize": 294,
+        "runtimeCodeHash": "0xc4db3c6bd74cb88536f493b65ad71632e8343aaf56435efb40385241bcc2c75d",
+        "compiledRuntimeMatchesChain": true,
+        "verification": {
+          "status": "bytecode-attested"
+        }
+      }
+    }
+  },
+  "signer": "0x41EcD6dAcFdB010e94351525542b7bAAa3748911",
+  "signature": "0x60f6fc57cabd5675d3e4fac0fdeaa63479260a31ea108e84449e724e00f95a9118c3793fa6bd2b7d6928c0215fd4896e0d3fbe3718456f573d9835fdc4047e301b",
+  "signatureValid": true,
+  "status": "signed"
+}

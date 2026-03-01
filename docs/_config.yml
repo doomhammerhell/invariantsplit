@@ -1,0 +1,6 @@
+title: InvariantSplit
+description: Deterministic ETH settlement primitive with a minimal execution plane and an attestable assurance plane.
+theme: minima
+markdown: kramdown
+plugins:
+  - jekyll-feed

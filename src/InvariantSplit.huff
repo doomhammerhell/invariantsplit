@@ -1,0 +1,133 @@
+#define constant RECIPIENT_A = 0x{{RECIPIENT_A}}
+#define constant RECIPIENT_B = 0x{{RECIPIENT_B}}
+#define constant RECIPIENT_C = 0x{{RECIPIENT_C}}
+
+#define constant BASIS_POINTS = 0x2710
+#define constant WEIGHT_A = 0x1388
+#define constant WEIGHT_B = 0x0bb8
+#define constant DISTRIBUTE_SELECTOR = 0xe4fc6b6d
+
+#define macro DISTRIBUTE() = takes(0) returns(0) {
+    callvalue
+    dup1
+    iszero
+    distribution_done
+    jumpi
+
+    0x00
+    mstore
+
+    0x00
+    mload
+    [WEIGHT_A]
+    mul
+    [BASIS_POINTS]
+    swap1
+    div
+    0x20
+    mstore
+
+    0x00
+    mload
+    [WEIGHT_B]
+    mul
+    [BASIS_POINTS]
+    swap1
+    div
+    0x40
+    mstore
+
+    0x00
+    mload
+    0x20
+    mload
+    swap1
+    sub
+    0x40
+    mload
+    swap1
+    sub
+    0x60
+    mstore
+
+    0x00
+    0x00
+    0x00
+    0x00
+    0x20
+    mload
+    [RECIPIENT_A]
+    gas
+    call
+    iszero
+    revert_distribution
+    jumpi
+
+    0x00
+    0x00
+    0x00
+    0x00
+    0x40
+    mload
+    [RECIPIENT_B]
+    gas
+    call
+    iszero
+    revert_distribution
+    jumpi
+
+    0x00
+    0x00
+    0x00
+    0x00
+    0x60
+    mload
+    [RECIPIENT_C]
+    gas
+    call
+    iszero
+    revert_distribution
+    jumpi
+
+distribution_done:
+    stop
+
+revert_distribution:
+    0x00
+    0x00
+    revert
+}
+
+#define macro MAIN() = takes(0) returns(0) {
+    calldatasize
+    iszero
+    dispatch_distribution
+    jumpi
+
+    calldatasize
+    0x04
+    eq
+    validate_selector
+    jumpi
+
+    0x00
+    0x00
+    revert
+
+validate_selector:
+    0x00
+    calldataload
+    0xe0
+    shr
+    [DISTRIBUTE_SELECTOR]
+    eq
+    dispatch_distribution
+    jumpi
+
+    0x00
+    0x00
+    revert
+
+dispatch_distribution:
+    DISTRIBUTE()
+}

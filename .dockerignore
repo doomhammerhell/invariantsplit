@@ -1,0 +1,16 @@
+.devcontainer/
+.git/
+.github/
+.husky/
+.vscode/
+attestations/
+artifacts/
+broadcast/
+cache/
+deployments/
+node_modules/
+out/
+tmp/
+*.log
+.env
+.secrets/

@@ -1,0 +1,77 @@
+{
+  "name": "invariantsplit",
+  "description": "Deterministic ETH settlement primitive with a minimal execution plane and an attestable assurance plane.",
+  "version": "0.1.0",
+  "private": true,
+  "license": "Apache-2.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22 <25"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doomhammerhell/invariantsplit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/doomhammerhell/invariantsplit/issues"
+  },
+  "homepage": "https://github.com/doomhammerhell/invariantsplit#readme",
+  "scripts": {
+    "prepare": "node scripts/prepare-husky.mjs",
+    "build": "PATH=\"$HOME/.foundry/bin:$PATH\" forge build",
+    "test": "PATH=\"$HOME/.foundry/bin:$PATH\" forge test -vvv",
+    "gas": "PATH=\"$HOME/.foundry/bin:$PATH\" forge test --match-test test_gas_ -vvv",
+    "gas-report": "PATH=\"$HOME/.foundry/bin:$PATH\" forge test --gas-report -vvv",
+    "benchmark": "PATH=\"$HOME/.foundry/bin:$PATH\" forge test --match-test test_gas_selector_huff_is_lower_than_solidity -vvvv",
+    "lint": "npm run lint:js && npm run lint:md && npm run lint:sol && npm run format:check",
+    "lint:js": "eslint . --max-warnings=0",
+    "lint:md": "markdownlint-cli2 \"**/*.md\" \"!node_modules/**\" \"!out/**\" \"!cache/**\" \"!broadcast/**\" \"!attestations/**\"",
+    "lint:sol": "solhint \"src/**/*.sol\" \"tests/**/*.sol\" \"scripts/**/*.s.sol\"",
+    "format": "prettier . --write && PATH=\"$HOME/.foundry/bin:$PATH\" forge fmt",
+    "format:check": "prettier . --check . && PATH=\"$HOME/.foundry/bin:$PATH\" forge fmt --check",
+    "audit:npm": "npm audit --audit-level=high",
+    "assets:article": "node scripts/export-article-assets.mjs",
+    "build:release": "PATH=\"$HOME/.foundry/bin:$PATH\" node scripts/build-release.mjs",
+    "deploy:simulate": "PATH=\"$HOME/.foundry/bin:$PATH\" node scripts/deploy.mjs simulate",
+    "deploy:broadcast": "PATH=\"$HOME/.foundry/bin:$PATH\" node scripts/deploy.mjs broadcast",
+    "verify:solidity": "PATH=\"$HOME/.foundry/bin:$PATH\" node scripts/verify-solidity.mjs",
+    "verify:runtime": "PATH=\"$HOME/.foundry/bin:$PATH\" node scripts/verify-runtime.mjs",
+    "attest:release": "PATH=\"$HOME/.foundry/bin:$PATH\" node scripts/attest-release.mjs",
+    "verify:attestation": "PATH=\"$HOME/.foundry/bin:$PATH\" node scripts/verify-attestation.mjs",
+    "bytecode:report": "PATH=\"$HOME/.foundry/bin:$PATH\" node scripts/bytecode-report.mjs",
+    "demo:transactions": "PATH=\"$HOME/.foundry/bin:$PATH\" node scripts/demo-transactions.mjs"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.4.2",
+    "@commitlint/config-conventional": "^20.4.2",
+    "@eslint/js": "^9.39.3",
+    "eslint": "^9.39.3",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-jsdoc": "^50.8.0",
+    "eslint-plugin-n": "^17.15.1",
+    "eslint-plugin-security": "^3.0.1",
+    "globals": "^17.3.0",
+    "huff-neo-js": "^1.5.14",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.3.0",
+    "markdownlint-cli2": "^0.21.0",
+    "prettier": "^3.5.3",
+    "solhint": "^6.0.3"
+  },
+  "lint-staged": {
+    "*.{json,yml,yaml}": [
+      "prettier --write"
+    ],
+    "*.{js,mjs,cjs}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.md": [
+      "prettier --write",
+      "markdownlint-cli2 --fix"
+    ],
+    "*.sol": [
+      "solhint --fix"
+    ]
+  }
+}

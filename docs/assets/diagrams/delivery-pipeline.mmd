@@ -1,0 +1,9 @@
+flowchart TD
+  Source["Source + spec + configs"] --> Lint["Lint / format / static analysis"]
+  Lint --> Build["forge build + Huff compilation"]
+  Build --> Test["Property, differential and gas tests"]
+  Test --> Bundle["build-release\nconfigHash + CREATE2 predictions"]
+  Bundle --> Broadcast["deploy:broadcast"]
+  Broadcast --> Verify["verify-solidity + verify-runtime"]
+  Verify --> Attest["attest-release"]
+  Attest --> Publish["deployments/, attestations/, docs/"]

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-02-28T22:16:17.993Z",
+  "chainId": "11155111",
+  "profile": "observed",
+  "profileHash": "0x2d48fad9034a47f293988d5e85fce1510a920127b7d5b0869a13619156a149b1",
+  "configHash": "0x94c46e9fd4f6c48f12c1a9fcf091eaec30571d94382890e37b9ac2d9b46c4f32",
+  "recipients": {
+    "recipientA": "0x98e45be04dedfc4f51515d3c243fd38566a5f1b1",
+    "recipientB": "0x69cfb07ce5f4481ff8ce5a5be8e8be8426b1fb2a",
+    "recipientC": "0x66b23c52b11375d082dc32137dd4ae9d3cf702f4"
+  },
+  "solidity": {
+    "artifact": "SplitSolidityObserved",
+    "artifactId": "0x2f418dd059e9acb64f1a9c9e350b3b2bad7793531f886bc5a717bfdf46b062e1",
+    "constructorArgs": "0x00000000000000000000000098e45be04dedfc4f51515d3c243fd38566a5f1b100000000000000000000000069cfb07ce5f4481ff8ce5a5be8e8be8426b1fb2a00000000000000000000000066b23c52b11375d082dc32137dd4ae9d3cf702f494c46e9fd4f6c48f12c1a9fcf091eaec30571d94382890e37b9ac2d9b46c4f32",
+    "creationCodeHash": "0x4a44847811065e5a20b5b97e8ef3e0a10cf16a8d8669f10153bdb266d900af4c",
+    "salt": "0x9268aebf5aa3fc40ad40818d69aaa4db18b828b218060e0287b8eb26a5811e62",
+    "predictedAddress": "0xc5068CA8448E5FAEd512eA4F734eE6f5b1b08f71"
+  },
+  "huff": {
+    "artifact": "InvariantSplitObserved",
+    "artifactId": "0x49d036c608efc24cccc584b906eb38fcc09c00d31cd3fbd6d432d0c8ff3a872b",
+    "configHash": "0x94c46e9fd4f6c48f12c1a9fcf091eaec30571d94382890e37b9ac2d9b46c4f32",
+    "creationCodeHash": "0x1bdfe62f68f242fce38d1f15b88273d0f48042bc24584728738e3eba33513dcf",
+    "runtimeCodeHash": "0xc4db3c6bd74cb88536f493b65ad71632e8343aaf56435efb40385241bcc2c75d",
+    "salt": "0xe583b98a29438f9a20e69e03d5464382cd837c0236b688c19a03cb366f9da753",
+    "predictedAddress": "0x43A2F08D802642BD30EbaDa4A509d5bbBCa0d2fC"
+  },
+  "factory": "0x8f9633c55d6ec8ef0426742460a4b374481d6c0c"
+}
