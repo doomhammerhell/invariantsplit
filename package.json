@@ -42,7 +42,7 @@
     "demo:transactions": "PATH=\"$HOME/.foundry/bin:$PATH\" node scripts/demo-transactions.mjs"
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.4.2",
+    "@commitlint/cli": "^20.4.3",
     "@commitlint/config-conventional": "^20.4.2",
     "@eslint/js": "^9.39.3",
     "eslint": "^9.39.3",
